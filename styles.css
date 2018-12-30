@@ -1,0 +1,234 @@
+body {
+    margin: 0 auto;
+}
+
+#sprint {
+    margin-left: 50px;
+    width: 100px;
+    height: 50px;
+}
+
+#menu {
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* new stuff: */
+.overlay {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    margin: 0;
+    transition: right 1s linear;
+}
+
+.overlay.on {
+    position: fixed;
+    width: 85%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.menu2 {
+    position: fixed;
+    width: 15%;
+    height: 100vh;
+    background-color: white;
+    color: blue;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.menu2.on {
+    left: 85%;
+    transition: left 1s linear;
+}
+
+.button {
+    top: 0;
+    float: right;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+
+}
+
+.button.on {
+    position: fixed;
+    right: 0;
+    padding: 10px;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links div {
+    font-size: 20px;
+    padding: 18px;
+    margin-left: 15px;
+}
+
+.logOut {
+    font-size: 14px;
+    padding: 18px;
+    margin-left: 15px;
+}
+/* end of new stuff! */
+
+.container {
+    position: relative;
+    color: white;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.8);
+}
+
+.container .centered {
+    color: white;
+    font-family: georgia, serif;
+    font-size: 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .btn {
+    color: chocolate;
+    font-size: 25px;
+    font-family: georgia, serif;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 10px 70px;
+    position: relative;
+    background-color: gold;
+    border-radius: 50px 50px;
+    border: 5px solid chocolate;
+}
+
+.boxes {
+    background-color: lightgray;
+    width: 100%;
+    overflow: hidden;
+}
+
+.boxes img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0px 10px;
+
+}
+
+.box {
+    margin-left: 100px;
+    width: 40%;
+    font-family: georgia, serif;
+    font-style: normal;
+    font-size: 15px;
+    display: inline-block;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+    /* border: 2px solid black; */
+}
+
+/* the modal part! */
+#modal {
+    position: absolute;
+    border-radius: 14px;
+    padding: 8px;
+    z-index: 9999;
+    width: 35%;
+    height: 300px;
+    transition-delay: 1s;
+    top: calc(50% - 150px);
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+#content {
+    border-radius: 8px;
+    background: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#close {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: black;
+    top:12px;
+    right:12px;
+    text-decoration: none;
+}
+/* end of modal */
+
+
+
+.footer {
+    color: white;
+    background-color: grey;
+    font-family: georgia, serif;
+    font-style: normal;
+    font-size: 10px;
+    padding: 1px;
+}
+
+.footer p {
+    margin-left: 50px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+    .container .centered {
+        font-size: 10px;
+    }
+
+    .boxes p {
+        font-size: 12px;
+        width: 250px;
+    }
+
+    .container .btn {
+        font-size: 15px;
+        padding: 5px 25px;
+    }
+
+    .box {
+        margin-left: 25px;
+        width: 200px;
+    }
+
+    /* new stuff: */
+
+    .menu2 {
+        width: 50%;
+    }
+
+
+    .menu2.on {
+        left: 50%;
+
+    }
+
+    .button.on {
+
+    }
+
+    .overlay.on {
+        width: 50%;
+    }
+}
